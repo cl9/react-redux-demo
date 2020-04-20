@@ -1,10 +1,10 @@
 export const stepData = {
     steps1: {
         stepList: [
-            "新增加减Action",
-            "新增加减Action对应的Reducer",
-            "创建Store",
-            "监听state的改变",
+            '新增加减Action',
+            '新增加减Action对应的Reducer',
+            '创建Store',
+            '监听state的改变',
         ],
         contentList: [{
                 code: `
@@ -19,7 +19,7 @@ export const stepData = {
                 const addTenAction = {
                     type: ACTION_ADD,
                     payload: 10
-                }`
+                }`,
             },
             {
                 code: `
@@ -42,15 +42,15 @@ export const stepData = {
                         default:
                             return state
                     }
-                }`
+                }`,
             },
-            "const store = createStore(countReducer)",
+            'const store = createStore(countReducer)',
             {
                 code: `
                 store.subscribe(() => {
                     console.log(store.getState())
-                })`
+                })`,
             },
-        ]
+        ],
     },
 }

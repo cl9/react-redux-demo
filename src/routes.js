@@ -5,44 +5,48 @@ import {
     BaseList,
     ThreePrinciple,
     ActionCreator,
-    CombineReducer
+    CombineReducer,
 } from './module'
 import Main from './Main'
 
 export default [{
-        path: "/",
-        name: "Main",
-        Component: Main
-    }, {
-        path: "/module/base",
-        name: "BaseRedux",
-        Component: BaseList
-    }, {
-        path: "/module/base/principle",
-        name: "ThreePrinciple",
-        Component: ThreePrinciple
-    }, {
-        path: "/module/base/actioncreator",
-        name: "ActionCreator",
-        Component: ActionCreator
-    }, {
-        path: "/module/base/combinereducer",
-        name: "CombineReducer",
-        Component: CombineReducer
+        path: '/',
+        name: 'Main',
+        component: Main,
     },
     {
-        path: "/module/async",
-        name: "AsyncList",
-        Component: AsyncList
+        path: '/module/base',
+        name: 'BaseRedux',
+        component: BaseList,
     },
     {
-        path: "/module/async/thunk",
-        name: "ReduxThunk",
-        Component: ReduxThunk
+        path: '/module/base/principle',
+        name: 'ThreePrinciple',
+        component: ThreePrinciple,
     },
     {
-        path: "/module/async/saga",
-        name: "ReduxSaga",
-        Component: ReduxSaga
+        path: '/module/base/actioncreator',
+        name: 'ActionCreator',
+        component: ActionCreator,
     },
-];
+    {
+        path: '/module/base/combinereducer',
+        name: 'CombineReducer',
+        component: CombineReducer,
+    },
+    {
+        path: '/module/async',
+        name: 'AsyncList',
+        component: AsyncList,
+    },
+    {
+        path: '/module/async/thunk',
+        name: 'ReduxThunk',
+        component: ReduxThunk,
+    },
+    {
+        path: '/module/async/saga',
+        name: 'ReduxSaga',
+        component: ReduxSaga,
+    },
+]

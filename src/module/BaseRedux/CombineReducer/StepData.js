@@ -1,11 +1,11 @@
 export const stepData = {
     steps1: {
         stepList: [
-            "新增乘除Action",
-            "新增乘除Action对应的Reducer",
-            "合并加减Reducer",
-            "根据合并的rootReucer创建Store",
-            "监听state的改变",
+            '新增乘除Action',
+            '新增乘除Action对应的Reducer',
+            '合并加减Reducer',
+            '根据合并的rootReucer创建Store',
+            '监听state的改变',
         ],
         contentList: [{
                 code: `
@@ -24,7 +24,7 @@ export const stepData = {
                         type: ACTION_DIVIDE,
                         payload: dividend
                     }
-                }`
+                }`,
             },
             {
                 code: `
@@ -47,7 +47,7 @@ export const stepData = {
                         default:
                             return state
                     }
-                }`
+                }`,
             },
             {
                 code: `
@@ -55,15 +55,15 @@ export const stepData = {
                     countAMReducer,
                     countMDReducer
                 })
-                `
+                `,
             },
-            "const store = createStore(rootReducer)",
+            'const store = createStore(rootReducer)',
             {
                 code: `
                 store.subscribe(() => {
                     console.log(store.getState())
-                })`
+                })`,
             },
-        ]
+        ],
     },
 }
