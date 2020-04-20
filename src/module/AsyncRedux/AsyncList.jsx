@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-    ListView
-} from '../../component'
+    RouterListView
+} from 'cl9-docs-component'
 
 function AsyncList(props) {
     const list = [
@@ -17,7 +17,7 @@ function AsyncList(props) {
     ]
 
     return (
-        <ListView list={list} />
+        <RouterListView list={list} />
     )
 }
 
