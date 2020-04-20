@@ -11,13 +11,13 @@ store.subscribe(() => {
 })
 
 function ReduxThunk() {
-  // useEffect(() => {
-  //   store.dispatch(startRequest())
-  //   axios
-  //     .get('https://jsonplaceholder.typicode.com/comments')
-  //     .then((result) => store.dispatch(requestSuccess(result)))
-  //     .catch((e) => console.log(e))
-  // }, [])
+  useEffect(() => {
+    store.dispatch(startRequest())
+    axios
+      .get('https://jsonplaceholder.typicode.com/comments')
+      .then(result => store.dispatch(requestSuccess(result)))
+      .catch(e => store.dispatch(requestFail(e.message)))
+  }, [])
 
   return (
     <div>
