@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { Button, Typography } from 'antd'
-import { HighlightCode } from 'cl9-docs-component'
-import axios from 'axios'
-import { startRequest, requestSuccess, requestFail } from './actions'
+import React, { useEffect } from 'react'
+import { Typography } from 'antd'
+import { StepList } from 'cl9-docs-component'
+import { getComments } from './actions'
 import { store } from './store'
+import { stepData } from './StepData'
 const { Title } = Typography
 store.subscribe(() => {
   console.log(store.getState())
@@ -12,32 +11,32 @@ store.subscribe(() => {
 
 function ReduxThunk() {
   useEffect(() => {
-    store.dispatch(startRequest())
-    axios
-      .get('https://jsonplaceholder.typicode.com/comments')
-      .then(result => store.dispatch(requestSuccess(result)))
-      .catch(e => store.dispatch(requestFail(e.message)))
+    store.dispatch(getComments())
   }, [])
 
   return (
     <div>
-      <Title level={3}>使用redux-thunk处理异步action</Title>
-      <HighlightCode>
-        {`
-                const addAction = addend => {
-                    return {
-                        type: ACTION_ADD,
-                        payload: addend
-                    }
-                }
-                
-                const minusAction = subtracted => {
-                    return {
-                        type: ACTION_MINUS,
-                        payload: subtracted
-                    }
-                }`}
-      </HighlightCode>
+      <Title level={2}>不使用redux-thunk</Title>
+      <StepList
+        stepList={stepData.steps1.stepList}
+        contentList={stepData.steps1.contentList}
+      />
+      <Title level={2}>使用redux-thunk</Title>
+      <StepList
+        stepList={stepData.steps2.stepList}
+        contentList={stepData.steps2.contentList}
+      />
+      <Title level={2}>为什么使用redux-thunk</Title>
+      <ul>
+        <li>
+          <a
+            href="https://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux"
+            target="_blank"
+          >
+            Why do we need middleware for async flow in Redux?
+          </a>
+        </li>
+      </ul>
     </div>
   )
 }
