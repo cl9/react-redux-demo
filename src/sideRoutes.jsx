@@ -12,4 +12,9 @@ export default [
     icon: <LaptopOutlined />,
     path: '/module/async',
   },
+  {
+    name: 'ReactRedux',
+    icon: <LaptopOutlined />,
+    path: '/module/react',
+  },
 ]
