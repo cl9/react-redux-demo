@@ -10,7 +10,7 @@
         "antd": "^4.1.3",
         "axios": "^0.19.2",
         "cl9-docs-component": "^1.0.5",
-        "highlight.js": "^9.18.1",
+        "highlight.js": "^10.1.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
